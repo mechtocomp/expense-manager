@@ -1,0 +1,18 @@
+table, th, td {
+	border: 1px solid black;
+}
+
+table.center {
+	position: fixed;
+	margin-left: -150px;
+	margin-top: -200px;
+	top: 50%;
+	left: 50%;
+}
+
+.box {
+	width:1500px;
+	height:250px;
+	background:#EF5D60;
+	margin:10px;
+}
