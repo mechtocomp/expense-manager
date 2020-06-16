@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.appsdeveloper.app.ws.io.entity.AddExpenseEntity;
+import com.appsdeveloper.app.ws.io.entity.UserEntity;
 
 @Repository
 public interface ExpenseRepository extends JpaRepository<AddExpenseEntity, Integer>
@@ -44,4 +45,6 @@ public interface ExpenseRepository extends JpaRepository<AddExpenseEntity, Integ
 	
 	@Query (value = " select if (count(amount)>0, sum(amount),0) from expense_table where date LIKE '____-12%'",nativeQuery = true)
 	public long decExpense();
+	
+	
 }

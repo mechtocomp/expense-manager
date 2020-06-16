@@ -37,14 +37,15 @@ public class AddExpenseEntity implements Serializable {
 	
 	@ManyToOne
     @JoinColumn(name = "user_id")
-	private AddExpenseEntity expense;
+	private UserEntity user;
 	
 	
-	public AddExpenseEntity getExpense() {
-		return expense;
+	
+	public UserEntity getUser() {
+		return user;
 	}
-	public void setExpense(AddExpenseEntity expense) {
-		this.expense = expense;
+	public void setUser(UserEntity user) {
+		this.user = user;
 	}
 	public String getExpenseTitle() {
 		return expenseTitle;

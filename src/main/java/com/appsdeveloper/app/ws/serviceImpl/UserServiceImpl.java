@@ -45,14 +45,20 @@ public class UserServiceImpl implements UserService {
 		if(userRepository.findByEmail(user.getEmail())==null) throw new RuntimeException("invalid email");
 		if(userRepository.findByPassword(user.getPassword())==null) throw new RuntimeException("invalid password");
 		
+		UserEntity entity = userRepository.findByEmail(user.getEmail());
+		entity.setIsLogin(true);
+		userRepository.save(entity);
+		
+		
 	}
 
 	@Override
 	public void addExpense(AddExpenseDto expenseDto) {
+		UserEntity entity = userRepository.findByIsLogin(true);
 		
 		AddExpenseEntity expenseEntity = new AddExpenseEntity();
 		BeanUtils.copyProperties(expenseDto, expenseEntity);
-		
+		entity.setExpense(expenseEntity);
 		AddExpenseEntity addedExpense= expenseRepository.save(expenseEntity);
 		
 	}

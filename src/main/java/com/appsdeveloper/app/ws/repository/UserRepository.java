@@ -12,7 +12,7 @@ public interface UserRepository extends JpaRepository<UserEntity, Integer> {
 	
 	UserEntity findByEmail(String email);
 	UserEntity findByPassword(String password);
-	
+	UserEntity findByIsLogin(Boolean login);
 	
 	
 	
