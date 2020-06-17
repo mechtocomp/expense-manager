@@ -11,7 +11,7 @@ $(function() {
 
 			$.each(data, function(key, value) {
 				//console.log(key + ": " + value);
-
+				if(value===0) return;
 				tbody.append(' \
 						<tr align="center">\
 							<td>'
