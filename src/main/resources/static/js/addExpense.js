@@ -25,7 +25,7 @@ var formData = {
 		dataType:'json',
 		success: function(data, status){
 			 $('#postresult').html('<p>  ' + data.response + '</p>');
-			alert(status);
+			
 		},
 		error: function(e){
 			alert('error');

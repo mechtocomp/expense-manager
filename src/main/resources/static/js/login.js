@@ -8,7 +8,7 @@ $(function() {
 
 function ajaxPostLogin() {
 	
-	alert('helo');
+	
 
 	var formData = {
 

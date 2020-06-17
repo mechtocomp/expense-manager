@@ -42,13 +42,18 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void authorizeUser(UserDto user) {
 		
-		if(userRepository.findByEmail(user.getEmail())==null) throw new RuntimeException("invalid email");
-		if(userRepository.findByPassword(user.getPassword())==null) throw new RuntimeException("invalid password");
+//		if(userRepository.findByEmail(user.getEmail())==null) throw new RuntimeException("invalid email");
+//		if(userRepository.findByPassword(user.getPassword())==null) throw new RuntimeException("invalid password");
+		
+		UserEntity isUser = userRepository.findByEmail(user.getEmail());
+		if(isUser.getEmail()==null) throw new RuntimeException("invalid email");
+		if(isUser.getPassword().contentEquals(user.getPassword())) {
 		
 		UserEntity entity = userRepository.findByEmail(user.getEmail());
 		entity.setIsLogin(true);
 		userRepository.save(entity);
-		
+		}
+		else throw new RuntimeException("invalid password");
 		
 	}
 
