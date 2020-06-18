@@ -1,7 +1,9 @@
 package com.appsdeveloper.app.ws.service;
 
+import java.util.List;
+
 import com.appsdeveloper.app.ws.shared.dto.AddExpenseDto;
-import com.appsdeveloper.app.ws.shared.dto.DashboardDto;
+import com.appsdeveloper.app.ws.shared.dto.AmountByMonth;
 import com.appsdeveloper.app.ws.shared.dto.UserDto;
 
 public interface UserService  {
@@ -10,6 +12,6 @@ public interface UserService  {
 	void authorizeUser(UserDto user);
 	
 	void addExpense(AddExpenseDto expenseDto);
-	DashboardDto dashboard();
+	public  List<AmountByMonth> dashboard();
 
 }

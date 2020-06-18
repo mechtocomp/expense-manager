@@ -1,5 +1,7 @@
 package com.appsdeveloper.app.ws.ui.controller;
 
+import java.util.List;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.appsdeveloper.app.ws.service.UserService;
 import com.appsdeveloper.app.ws.shared.dto.AddExpenseDto;
+import com.appsdeveloper.app.ws.shared.dto.AmountByMonth;
 import com.appsdeveloper.app.ws.shared.dto.DashboardDto;
 import com.appsdeveloper.app.ws.shared.dto.UserDto;
 import com.appsdeveloper.app.ws.ui.model.request.AddExpenseRequestModel;
@@ -67,15 +70,15 @@ public class MainController {
 		return new ResponseEntity <> (response, HttpStatus.OK);
 	}
 	
-	@GetMapping("/dashboard")
+	@GetMapping(path="/dashboard", produces = {"application/json"})
 	public ResponseEntity<Object> sendDashboard()
 	{
-		DashboardDto dto = userService.dashboard();
-		MonthlyExpenseResponse response = new MonthlyExpenseResponse();
+		List<AmountByMonth> amount = userService.dashboard();
+//		MonthlyExpenseResponse response = new MonthlyExpenseResponse();
+//		
+//		BeanUtils.copyProperties(dto, response);
 		
-		BeanUtils.copyProperties(dto, response);
-		
-		return new ResponseEntity<> (response, HttpStatus.OK); 
+		return new ResponseEntity<> (amount, HttpStatus.OK); 
 	}
 	
 

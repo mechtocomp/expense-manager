@@ -11,12 +11,12 @@ $(function() {
 
 			$.each(data, function(key, value) {
 				//console.log(key + ": " + value);
-				if(value===0) return;
+				if(value.amount===0) return;
 				tbody.append(' \
 						<tr align="center">\
 							<td>'
-						+ key + '</td>\
-							<td>' + value
+						+ value.monthName + value.year+ '</td>\
+							<td>' + value.amount
 						+ '</td>\
 						</tr>');
 
