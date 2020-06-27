@@ -10,7 +10,7 @@ $(function() {
 			tbody.html('');
 
 			$.each(data, function(key, value) {
-				//console.log(key + ": " + value);
+				
 				if(value.amount===0) return;
 				tbody.append(' \
 						<tr align="center">\

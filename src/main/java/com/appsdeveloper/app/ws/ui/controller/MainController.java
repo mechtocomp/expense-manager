@@ -55,6 +55,17 @@ public class MainController {
 		return HttpStatus.OK;
 	}
 	
+	
+	@GetMapping("/logout")
+	public HttpStatus logout()
+	{
+		
+		userService.logoutUser();
+		
+		return HttpStatus.OK;
+	}
+	
+	
 	@PostMapping("/addexpense")
 	public ResponseEntity<Object> addExpense(@RequestBody AddExpenseRequestModel expense)
 	{

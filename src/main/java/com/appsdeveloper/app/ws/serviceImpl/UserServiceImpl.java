@@ -78,4 +78,12 @@ public class UserServiceImpl implements UserService {
 		
 	}
 
+	@Override
+	public void logoutUser() {
+		
+		UserEntity entity = userRepository.findByIsLogin(true);
+		entity.setIsLogin(false);
+		userRepository.save(entity);
+	}
+
 }

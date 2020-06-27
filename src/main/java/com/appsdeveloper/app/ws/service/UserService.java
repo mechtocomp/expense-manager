@@ -10,6 +10,7 @@ public interface UserService  {
 	
 	UserDto createUser(UserDto user);
 	void authorizeUser(UserDto user);
+	void logoutUser();
 	
 	void addExpense(AddExpenseDto expenseDto);
 	public  List<AmountByMonth> dashboard();
