@@ -1,11 +1,13 @@
 package com.appsdeveloper.app.ws.ui.model.request;
 
+import java.util.Date;
+
 public class AddExpenseRequestModel 
 {
 	private String expenseTitle;
 	private String category;
 	private String amount;
-	private String date;
+	private Date date;
 	public String getExpenseTitle() {
 		return expenseTitle;
 	}
@@ -25,10 +27,10 @@ public class AddExpenseRequestModel
 	public void setAmount(String amount) {
 		this.amount = amount;
 	}
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 	

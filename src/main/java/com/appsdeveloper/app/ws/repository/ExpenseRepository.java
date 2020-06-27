@@ -51,12 +51,12 @@ public interface ExpenseRepository extends JpaRepository<AddExpenseEntity, Integ
 //	
 	
 	
-	@Query (value=" SELECT sum(amount) as amount,MONTHNAME(date) as monthName,YEAR(date) as year\r\n" + 
-			"FROM expense_table WHERE YEAR(date) = YEAR(date)\r\n" + 
-			"GROUP BY YEAR(date),MONTH(date)",nativeQuery=true)
-	public List<AmountByMonth> getAmount1();
+//	@Query (value=" SELECT sum(amount) as amount,MONTHNAME(date) as monthName,YEAR(date) as year\r\n" + 
+//			"FROM expense_table WHERE YEAR(date) = YEAR(date)\r\n" + 
+//			"GROUP BY YEAR(date),MONTH(date)",nativeQuery=true)
+//	public List<AmountByMonth> getAmount1();
 	
-	@Query(value = "SELECT new com.appsdeveloper.app.ws.shared.dto.AmountByMonth(month(t.date), year(t.date), sum(t.amount)) FROM expense_table t group by year(t.date), month(t.date)")
-	public List<AmountByMonth> getAmount();
+	@Query(value = "SELECT new com.appsdeveloper.app.ws.shared.dto.AmountByMonth(month(t.date) as monthName, year(t.date) as year, sum(t.amount) as amount) FROM expense t group by year(t.date), month(t.date)")
+	List<AmountByMonth> getAmount();
 	
 }

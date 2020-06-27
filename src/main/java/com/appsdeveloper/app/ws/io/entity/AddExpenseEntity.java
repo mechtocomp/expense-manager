@@ -1,6 +1,7 @@
 package com.appsdeveloper.app.ws.io.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,7 +14,7 @@ import javax.persistence.ManyToOne;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.sun.istack.NotNull;
 
-@Entity (name="expenseTable")
+@Entity (name="expense")
 public class AddExpenseEntity implements Serializable {
 
 	private static final long serialVersionUID = 6247270792212832562L;
@@ -32,7 +33,7 @@ public class AddExpenseEntity implements Serializable {
 	private String amount;
 	
 	@NotNull
-	private String date;
+	private Date date;
 	
 	
 	@ManyToOne
@@ -66,10 +67,10 @@ public class AddExpenseEntity implements Serializable {
 	public void setAmount(String amount) {
 		this.amount = amount;
 	}
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 }
