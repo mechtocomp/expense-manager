@@ -15,13 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.appsdeveloper.app.ws.service.UserService;
 import com.appsdeveloper.app.ws.shared.dto.AddExpenseDto;
 import com.appsdeveloper.app.ws.shared.dto.AmountByMonth;
-import com.appsdeveloper.app.ws.shared.dto.DashboardDto;
 import com.appsdeveloper.app.ws.shared.dto.UserDto;
 import com.appsdeveloper.app.ws.ui.model.request.AddExpenseRequestModel;
 import com.appsdeveloper.app.ws.ui.model.request.AuthorizeUser;
 import com.appsdeveloper.app.ws.ui.model.request.UserDetailsRequestModel;
 import com.appsdeveloper.app.ws.ui.model.response.AddExpenseResponseModel;
-import com.appsdeveloper.app.ws.ui.model.response.MonthlyExpenseResponse;
 import com.appsdeveloper.app.ws.ui.model.response.UserResponse;
 
 @RestController

@@ -6,13 +6,13 @@ public class AmountByMonth implements Serializable {
 
 	private static final long serialVersionUID = 2738406113210358237L;
 
-	private int monthName;
+	private String monthName;
 	private int year;
 	private String amount;
-	public int getMonthName() {
+	public String getMonthName() {
 		return monthName;
 	}
-	public void setMonthName(int monthName) {
+	public void setMonthName(String monthName) {
 		this.monthName = monthName;
 	}
 	public int getYear() {
@@ -27,7 +27,7 @@ public class AmountByMonth implements Serializable {
 	public void setAmount(String amount) {
 		this.amount = amount;
 	}
-	public AmountByMonth(int monthName, int year, String amount) {
+	public AmountByMonth(String monthName, int year, String amount) {
 		super();
 		this.monthName = monthName;
 		this.year = year;

@@ -15,7 +15,7 @@ $(function() {
 				tbody.append(' \
 						<tr align="center">\
 							<td>'
-						+ value.year+"-" + value.monthName+ '</td>\
+						+ value.monthName+" " + value.year+ '</td>\
 							<td>' + value.amount
 						+ '</td>\
 						</tr>');

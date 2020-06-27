@@ -13,7 +13,6 @@ import com.appsdeveloper.app.ws.repository.UserRepository;
 import com.appsdeveloper.app.ws.service.UserService;
 import com.appsdeveloper.app.ws.shared.dto.AddExpenseDto;
 import com.appsdeveloper.app.ws.shared.dto.AmountByMonth;
-import com.appsdeveloper.app.ws.shared.dto.DashboardDto;
 import com.appsdeveloper.app.ws.shared.dto.UserDto;
 
 @Service
@@ -67,45 +66,14 @@ public class UserServiceImpl implements UserService {
 		AddExpenseEntity expenseEntity = new AddExpenseEntity();
 		BeanUtils.copyProperties(expenseDto, expenseEntity);
 		entity.setExpense(expenseEntity);
-		AddExpenseEntity addedExpense= expenseRepository.save(expenseEntity);
+		//AddExpenseEntity addedExpense= 
+				expenseRepository.save(expenseEntity);
 		
 	}
 
 	@Override
 	public  List<AmountByMonth> dashboard() {
 		
-//		long janSum = expenseRepository.janExpense();
-//		long febSum = expenseRepository.febExpense();
-//		long marSum = expenseRepository.marExpense();
-//		long aprSum = expenseRepository.aprExpense();
-//		long maySum = expenseRepository.mayExpense();
-//		long junSum = expenseRepository.junExpense();
-//		long julySum = expenseRepository.julyExpense();
-//		long augSum = expenseRepository.augExpense();
-//		long sepSum = expenseRepository.sepExpense();
-//		long octSum = expenseRepository.octExpense();
-//		long novSum = expenseRepository.novExpense();
-//		long decSum = expenseRepository.decExpense();
-//		
-//		DashboardDto dto = new DashboardDto();
-//		
-//		dto.setJAN(janSum);
-//		dto.setFEB(febSum);
-//		dto.setMAR(marSum);
-//		dto.setAPR(aprSum);
-//		dto.setMAY(maySum);
-//		dto.setJUN(junSum);
-//		dto.setJULY(julySum);
-//		dto.setAUG(augSum);
-//		dto.setSEP(sepSum);
-//		dto.setOCT(octSum);
-//		dto.setNOV(novSum);
-//		dto.setDEC(decSum);
-//		
-		//return dto;
-		
-		
-		// List<AmountByMonth> amountByMonth = expenseRepository.getAmount();
 		 return expenseRepository.getAmount();
 		
 	}

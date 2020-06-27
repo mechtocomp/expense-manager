@@ -3,15 +3,13 @@ package com.appsdeveloper.app.ws.io.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.TemporalType;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.sun.istack.NotNull;
 
 @Entity (name="expense")
@@ -33,6 +31,7 @@ public class AddExpenseEntity implements Serializable {
 	private String amount;
 	
 	@NotNull
+	@javax.persistence.Temporal(TemporalType.DATE)
 	private Date date;
 	
 	
