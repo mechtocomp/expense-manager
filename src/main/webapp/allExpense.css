@@ -1,22 +1,3 @@
-table, th, td {
-	border: 1px solid black;
-}
-
-table.center {
-	position: fixed;
-	margin-left: -150px;
-	margin-top: -200px;
-	top: 50%;
-	left: 50%;
-}
-
-
-
-#logout {
-	
-	margin-left: 1350px;
-}
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
 *, *:before, *:after {
@@ -54,5 +35,13 @@ tbody tr {
 }
 tbody tr:hover {
   background: #014055;
+}
+
+table.center {
+	position: fixed;
+	margin-left: -300px;
+	margin-top: -200px;
+	top: 50%;
+	left: 50%;
 }
 
