@@ -22,6 +22,8 @@ function ajaxAllExpenses() {
 			$.each(data, function(key, value) {
 
 				if (value.amount === 0) return;
+				
+				
 				tbody.append(' \
 						<tr align="center">\
 							<td>'
@@ -33,8 +35,8 @@ function ajaxAllExpenses() {
 						 '</td>\
 						<td>' + value.date +
 						 '</td>\
-						<td> <input type="button" id="edit"  value="Edit"></td>\
-						<td> <input type="button" id="delete"  value="Delete"></td>\
+						<td> <input type="button" id='+value.id+'  value="Edit" class="edit"></td>\
+						<td> <input type="button" id='+value.id+'  value="Delete" class="delete"></td>\
 						</tr>');
 
 			})

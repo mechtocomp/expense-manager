@@ -7,6 +7,7 @@ public class AddExpenseDto implements Serializable
 {
 	private static final long serialVersionUID = -8030801319127041321L;
 	
+	private int id;	
 	private String expenseTitle;
 	private String category;
 	private String amount;
@@ -35,5 +36,11 @@ public class AddExpenseDto implements Serializable
 	}
 	public void setDate(Date date) {
 		this.date = date;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 }

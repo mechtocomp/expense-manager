@@ -13,5 +13,6 @@ public interface ExpenseService  {
 	public  List<AmountByMonth> dashboard();
 	JSONObject totExpenditure();
 	List<AddExpenseDto> allExpense();
+	void deleteExpense(int id);
 
 }

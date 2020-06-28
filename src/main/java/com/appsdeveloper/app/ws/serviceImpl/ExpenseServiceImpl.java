@@ -2,6 +2,7 @@ package com.appsdeveloper.app.ws.serviceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.json.simple.JSONObject;
 import org.springframework.beans.BeanUtils;
@@ -78,6 +79,12 @@ public class ExpenseServiceImpl implements ExpenseService {
 		}
 
 		return returnValue;
+	}
+
+	@Override
+	public void deleteExpense(int id) {
+		
+		 expenseRepository.deleteById(id);
 	}
 
 }
