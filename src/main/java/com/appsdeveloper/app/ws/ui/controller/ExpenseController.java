@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -87,6 +88,17 @@ public class ExpenseController {
 	{
 		//int id = Integer.parseInt(uid);
 		expenseService.deleteExpense(id);
+		
+		return HttpStatus.OK;
+	}
+	
+	@PutMapping("/{id}")
+	public HttpStatus updateExpense(@PathVariable int id, @RequestBody AddExpenseRequestModel expense)
+	{
+		AddExpenseDto expenseDto = new AddExpenseDto();
+		BeanUtils.copyProperties(expense, expenseDto);
+		
+		expenseService.updateExpense(id,expenseDto);
 		
 		return HttpStatus.OK;
 	}

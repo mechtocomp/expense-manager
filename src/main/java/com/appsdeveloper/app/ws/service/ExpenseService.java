@@ -14,5 +14,6 @@ public interface ExpenseService  {
 	JSONObject totExpenditure();
 	List<AddExpenseDto> allExpense();
 	void deleteExpense(int id);
+	void updateExpense(int id,AddExpenseDto expenseDto);
 
 }

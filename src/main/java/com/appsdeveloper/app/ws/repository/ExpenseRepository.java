@@ -21,5 +21,5 @@ public interface ExpenseRepository extends JpaRepository<AddExpenseEntity, Integ
 	
 	@Query(value = "SELECT * FROM expense u WHERE u.user_id = ?",  nativeQuery = true)
 	List<AddExpenseEntity> getAllExpense(Integer id);
-	
+
 }

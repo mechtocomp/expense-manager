@@ -26,14 +26,14 @@ function ajaxAllExpenses() {
 				
 				tbody.append(' \
 						<tr align="center">\
-							<td>'
+							<td class="expenseTitle">'
 						+ value.expenseTitle + 
 						 '</td>\
-							<td>' + value.category +
+							<td class="category">' + value.category +
 						 '</td>\
-						<td>' + value.amount +
+						<td class="amount">' + value.amount +
 						 '</td>\
-						<td>' + value.date +
+						<td class="date">' + value.date +
 						 '</td>\
 						<td> <input type="button" id='+value.id+'  value="Edit" class="edit"></td>\
 						<td> <input type="button" id='+value.id+'  value="Delete" class="delete"></td>\

@@ -87,4 +87,18 @@ public class ExpenseServiceImpl implements ExpenseService {
 		 expenseRepository.deleteById(id);
 	}
 
+	@Override
+	public void updateExpense(int id,AddExpenseDto expenseDto) {
+		
+		//AddExpenseEntity expenseEntity = new AddExpenseEntity();
+		//expenseEntity.setId(id);
+		AddExpenseEntity expenseEntity = expenseRepository.findById(id).orElse(null);
+		//BeanUtils.copyProperties(expenseDto, expenseEntity);
+		expenseEntity.setExpenseTitle(expenseDto.getExpenseTitle());
+		expenseEntity.setCategory(expenseDto.getCategory());
+		expenseEntity.setAmount(expenseDto.getAmount());
+		expenseEntity.setDate(expenseDto.getDate());
+		expenseRepository.save(expenseEntity);
+	}
+
 }
