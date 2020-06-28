@@ -33,6 +33,8 @@ function ajaxAllExpenses() {
 						 '</td>\
 						<td>' + value.date +
 						 '</td>\
+						<td> <input type="button" id="edit"  value="Edit"></td>\
+						<td> <input type="button" id="delete"  value="Delete"></td>\
 						</tr>');
 
 			})
