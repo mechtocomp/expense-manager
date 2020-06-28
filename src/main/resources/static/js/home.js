@@ -4,14 +4,15 @@ $(function() {
 
 		type : 'GET',
 		contentType : 'application/json',
-		url : 'http://localhost:8080/user/dashboard',
+		url : 'http://localhost:8080/expense/dashboard',
 		success : function(data, status) {
 			var tbody = $('tbody');
 			tbody.html('');
 
 			$.each(data, function(key, value) {
 				
-				if(value.amount===0) return;
+				if(value.amount===0) 
+					return;
 				tbody.append(' \
 						<tr align="center">\
 							<td>'
@@ -21,7 +22,30 @@ $(function() {
 						</tr>');
 
 			})
+			
+			
+			
+			
+			$.ajax({
 
+				type : 'GET',
+				contentType : 'application/json',
+				url : 'http://localhost:8080/expense/expenditure',
+				success : function(data, status) {
+						
+						tbody.append(' \
+								<tr align="center">\
+									<td>Total Expenditure	</td>\
+									<td>' + data.expenditure
+								+ '</td>\
+								</tr>');	
+
+				},		
+				error : function(e) {
+					alert('error');
+					console.log('ERROR', e);
+				}
+			});
 		},
 		error : function(e) {
 			alert('error');

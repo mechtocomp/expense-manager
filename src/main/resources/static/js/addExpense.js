@@ -20,7 +20,7 @@ var formData = {
 		
 		type:'POST',
 		contentType:'application/json',
-		url:'http://localhost:8080/user/addexpense',
+		url:'http://localhost:8080/expense/addexpense',
 		data: JSON.stringify(formData),
 		dataType:'json',
 		success: function(data, status){
