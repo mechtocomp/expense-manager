@@ -45,3 +45,140 @@ table.center {
 	left: 50%;
 }
 
+
+.edit,.delete {
+  /* default for <button>, but useful for <a> */
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+
+  /* create a small space when buttons wrap on 2 lines */
+  margin: 2px 0;
+
+  /* invisible border (will be colored on hover/focus) */
+  border: solid 1px transparent;
+  border-radius: 4px;
+
+  /* size comes from text & padding (no width/height) */
+  padding: 0.5em 1em;
+
+  /* make sure colors have enough contrast! */
+  color: #ffffff;
+  background-color: #105469;
+}
+
+.delete:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+.edit:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+
+/* inverse colors on mouse-over */
+.delete:hover {
+  color: white;
+  border-color: currentColor;
+  background-color: transparent;
+}
+.edit:hover {
+  color: white;
+  border-color: currentColor;
+  background-color: transparent;
+}
+
+
+/*  UPDATE FORM */
+#updateForm {
+	position: fixed;
+	margin-left: -550px;
+	margin-top: 100px;
+	top: 50%;
+	left: 50%;
+}
+
+input[type=text] {
+  padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  
+   border-radius:10px;
+  border: 1px solid #eee;
+  transition: .3s border-color;
+  border: 1px solid #aaa;
+ 
+}
+input[type=submit] {
+	
+	
+	 /* default for <button>, but useful for <a> */
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+
+  /* create a small space when buttons wrap on 2 lines */
+  margin: 2px 0;
+
+  /* invisible border (will be colored on hover/focus) */
+  border: solid 1px transparent;
+  border-radius: 4px;
+
+  /* size comes from text & padding (no width/height) */
+  padding: 0.5em 1em;
+
+  /* make sure colors have enough contrast! */
+  color: #ffffff;
+  background-color: #012B39;
+}
+
+input[type=submit]:hover {
+  color: white;
+  border-color: currentColor;
+  background-color: transparent;
+}
+input[type=submit]:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+
+
+
+
+
+/* Home button*/
+
+.home {
+	
+	
+  /* default for <button>, but useful for <a> */
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+
+  /* create a small space when buttons wrap on 2 lines */
+  margin: 2px 0;
+
+  /* invisible border (will be colored on hover/focus) */
+  border: solid 1px transparent;
+  border-radius: 4px;
+
+  /* size comes from text & padding (no width/height) */
+  padding: 0.5em 1em;
+
+  /* make sure colors have enough contrast! */
+  color: #ffffff;
+  background-color: #012B39;
+}
+.home:hover {
+  color: white;
+  border-color: currentColor;
+  background-color: transparent;
+}
+.home:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
