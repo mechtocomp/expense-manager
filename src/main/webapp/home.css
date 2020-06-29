@@ -12,10 +12,7 @@ table.center {
 
 
 
-#logout {
-	
-	margin-left: 1350px;
-}
+
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
@@ -56,3 +53,77 @@ tbody tr:hover {
   background: #014055;
 }
 
+
+
+/* LOGOUT BUTTON*/
+#logout {
+	
+	margin-left: 1300px;
+	margin-top: 50px;
+	top: 50%;
+	left: 50%;
+}
+#allExpense {
+	
+	margin-left: 615px;
+	margin-top: -10px;
+	top: 50%;
+	left: 50%;
+}
+#add {
+	
+	margin-left: 615px;
+	margin-top: 250px;
+	top: 50%;
+	left: 50%;
+}
+.logout,.add,.all {
+  /* default for <button>, but useful for <a> */
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+
+  /* create a small space when buttons wrap on 2 lines */
+  margin: 2px 0;
+
+  /* invisible border (will be colored on hover/focus) */
+  border: solid 1px transparent;
+  border-radius: 4px;
+
+  /* size comes from text & padding (no width/height) */
+  padding: 0.5em 1em;
+  cursor: pointer;
+
+  /* make sure colors have enough contrast! */
+  color: #ffffff;
+  background-color: #012B39;
+}
+.logout:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+.add:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+.all:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+.logout:hover {
+  color: white;
+  border-color: currentColor;
+  background-color: transparent;
+}
+.add:hover {
+  color: white;
+  border-color: currentColor;
+  background-color: transparent;
+}
+.all:hover {
+  color: white;
+  border-color: currentColor;
+  background-color: transparent;
+}

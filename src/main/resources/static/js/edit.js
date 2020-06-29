@@ -37,10 +37,10 @@ function ajaxUpdateExpense(expenseTitle,category,amount,date,uid){
 	//add form in one row
 	tbody.append('\
 			<form id="updateForm">\
-				Expense Title: <input type="text" id="title" name="title" value='+expenseTitle+'>&nbsp\
-				Category: <input type="text" id="category" name="category" value='+category+'>&nbsp\
-				Amount: <input type="text" id="amount" name="amount" value='+amount+'>&nbsp\
-				Date: <input type="text" id="date" name="date" value='+date+'>&nbsp &nbsp\
+				Expense Title: <input type="text" id="title" name="title" value='+expenseTitle+' required>&nbsp\
+				Category: <input type="text" id="category" name="category" value='+category+' required>&nbsp\
+				Amount: <input type="text" id="amount" name="amount" value='+amount+' required pattern="[0-9]{1,}" title="Enter a valid number">&nbsp\
+				Date: <input type="date" id="date" name="date" value='+date+' required>&nbsp &nbsp\
 				<input type="submit" id="submitUpdate">\
 			</form>\
 			');

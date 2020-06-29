@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+input[type=text],input[type=date] {
+ 
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+
+input[type=submit] {
+  background-color: #578796;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align: center
+  
+}
+
+input[type=submit]:hover {
+  
+   background-color: #012B39;
+  color: white;
+  border-color: currentColor;
+}
+
+input[type=submit]:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+#expenseform {
+	position: fixed;
+	margin-left: -150px;
+	margin-top: -200px;
+	top: 50%;
+	left: 50%;
+}
+body {
+  background-color: #105469;
+}
+
+/* HOME*/
+
+.home {
+  background-color: #3f7687;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align: center
+  
+}
+
+.home:hover {
+  background-color: #012B39;
+  color: white;
+  border-color: currentColor;
+ 
+}
+
+.home:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}

@@ -4,12 +4,13 @@
 		<title>login</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script type="text/javascript" src="/js/login.js"></script>
+		<link rel="stylesheet" type="text/css" href="login.css" />
 	</head>
 	<body>
 		<form id="loginform">
-			Enter email <input type="text" id="email"><br><br>
-			Password    <input type="password" id="password"><br><br>
-			<input type="submit" value="Login">
+			<input type="text" id="email" placeholder="Email" required><br><br>
+		    <input type="password" id="password" placeholder="Password" required><br><br>
+			<input type="submit" value="Login" class="submit">
 		</form>
 	</body>
 </html>
