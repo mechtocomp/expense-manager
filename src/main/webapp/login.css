@@ -45,6 +45,22 @@ input[type=submit]:active {
 	left: 50%;
 }
 
+#emailError {
+	position: fixed;
+	margin-left: 50px;
+	margin-top: -205px;
+	top: 50%;
+	left: 50%;
+}
+
+#passwordError {
+	position: fixed;
+	margin-left: 50px;
+	margin-top: -145px;
+	top: 50%;
+	left: 50%;
+}
+
 body {
   background-color: #105469;
 }

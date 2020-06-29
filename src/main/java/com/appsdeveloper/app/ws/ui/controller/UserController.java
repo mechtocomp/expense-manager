@@ -1,10 +1,13 @@
 package com.appsdeveloper.app.ws.ui.controller;
 
+import org.json.simple.JSONObject;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,15 +40,15 @@ public class UserController {
 		return response;
 	}
 	
-	@PostMapping("/login")
-	public HttpStatus authorize(@RequestBody AuthorizeUser user)
+	@PutMapping("/login")
+	public ResponseEntity<Object> authorize(@RequestBody AuthorizeUser user)
 	{
 		UserDto userDto = new UserDto();
 		BeanUtils.copyProperties(user, userDto);
 		
-		userService.authorizeUser(userDto);
+		JSONObject authorize = userService.authorizeUser(userDto);
 		
-		return HttpStatus.OK;
+		return new ResponseEntity<>(authorize,HttpStatus.OK);
 	}
 	
 	

@@ -18,13 +18,17 @@ function ajaxPostLogin() {
 
 	$.ajax({
 
-		type : 'POST',
+		type : 'PUT',
 		contentType : 'application/json',
 		url : 'http://localhost:8080/user/login',
 		data : JSON.stringify(formData),
 		dataType : 'json',
-		success : function(result) {
-			if (result == 'OK') {
+		success : function(data,status) {
+			if (data.emailError === 'invalid email') {
+				$('#emailError').html('<p>invalid email</p>')
+			}else if (data.passwordError === 'invalid password') {
+				$('#passwordError').html('<p>invalid password</p>')
+			}else if (data.result === 'okay') {
 				window.location.replace("http://localhost:8080/home.html");
 			}
 
