@@ -51,6 +51,11 @@ input[type=submit]:active {
 	margin-top: -205px;
 	top: 50%;
 	left: 50%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+  font-weight: 600;
+	color:#ff0000;
+	
 }
 
 #passwordError {
@@ -59,6 +64,10 @@ input[type=submit]:active {
 	margin-top: -145px;
 	top: 50%;
 	left: 50%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+  font-weight: 600;
+	color:#ff0000;
 }
 
 body {
