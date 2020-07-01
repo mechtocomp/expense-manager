@@ -1,6 +1,27 @@
 $(function() {
-
-	$.ajax({
+  
+  
+			$.ajax({
+				type : 'GET',
+				contentType : 'application/json',
+				url : 'http://localhost:8080/expense/expenditure',
+				success : function(data, status) {
+						
+						if(data.expenditure != null){
+							
+							$('#addTable').html('<table border="1" class="center">\
+									<thead>\
+									<tr align="center">\
+										<th>Month & Year</th>\
+										<th>Expenses (Rs)</th>\
+									</tr>\
+								</thead>\
+								<tbody>\
+\
+								</tbody>\
+							</table>');
+						
+    $.ajax({
 
 		type : 'GET',
 		contentType : 'application/json',
@@ -22,23 +43,21 @@ $(function() {
 						</tr>');
 
 			})
-			
-			
-			
-			
+		
 			$.ajax({
-
 				type : 'GET',
 				contentType : 'application/json',
 				url : 'http://localhost:8080/expense/expenditure',
 				success : function(data, status) {
+						
 						
 						tbody.append(' \
 								<tr align="center">\
 									<td><h4>Total Expenditure</h4>	</td>\
 									<td>' + data.expenditure
 								+ '</td>\
-								</tr>');	
+								</tr>');
+						
 
 				},		
 				error : function(e) {
@@ -51,6 +70,32 @@ $(function() {
 			alert('error');
 			console.log('ERROR', e);
 		}
-	});
+	});      
+              
+              
+              
+              
+              
+              
+              
+						}else{
+							$('#noExpenditure').html('<p>'+data.noExpense+'</p>');
+						}	
+
+				},		
+				error : function(e) {
+					alert('error');
+					console.log('ERROR', e);
+				}
+			});
+  
+  
+  
+  
+  
+  
+  
+
+	
 
 });

@@ -143,3 +143,12 @@ tbody tr:hover {
 	margin-top: 0px;
 	margin-left: 10px;
 }
+
+#noExpenditure {
+	margin-top:150px;
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 1.1em;
+	font-weight: 200;
+	margin-top: 170px;
+	margin-left: 550px;
+}

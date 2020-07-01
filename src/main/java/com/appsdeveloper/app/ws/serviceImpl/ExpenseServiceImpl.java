@@ -54,11 +54,16 @@ public class ExpenseServiceImpl implements ExpenseService {
 		UserEntity entity = userRepository.findByIsLogin(true);
 		int id = entity.getId();
 		
-		int amt = expenseRepository.getExpenditure(id);
-
-		expenditure.put("expenditure", new Integer(amt));
-
-		return expenditure;
+		Integer amt = expenseRepository.getExpenditure(id);
+		
+		if(amt==null) { 
+			expenditure.put("noExpense", "Hey...No expenses to show <br> click on \"Add Expense\" to continue.");
+			return expenditure;
+		}
+		else {
+			expenditure.put("expenditure", new Integer(amt));
+			return expenditure;
+			}
 	}
 
 	@Override

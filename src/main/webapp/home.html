@@ -11,22 +11,13 @@
 <body>
 	<div class="box"></div>
 	<div id="title"><h1>Dashboard</h1></div>
-	<table border="1" class="center">
-		<thead>
-			<tr align="center">
-				<th>Month & Year</th>
-				<th>Expenses (Rs)</th>
-			</tr>
-		</thead>
-		<tbody>
+	<div id="addTable"> </div>
+	
 
-		</tbody>
-		<button type="button" id="logout" class="logout">Logout</button>
-		<input type="button" onClick="location.href='addExpense.html'" value="Add Expense" class="add" id="add">
-		<input type="button" id="allExpense" onClick="location.href='allExpense.html'" value="View All Expense" class="all">
-
-	</table>
-
+	<button type="button" id="logout" class="logout">Logout</button>
+	<input type="button" onClick="location.href='addExpense.html'" value="Add Expense" class="add" id="add">
+	<input type="button" id="allExpense" onClick="location.href='allExpense.html'" value="View All Expense" class="all">
 	<div id="postresult"></div>
+	<div id="noExpenditure"></div>
 </body>
 </html>

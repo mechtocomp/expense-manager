@@ -74,7 +74,7 @@ function ajaxUpdateExpense(expenseTitle,category,amount,date,uid){
 		dataType:'json',
 		success: function(data, status){
 			if (status == 'OK') {
-				window.location.replace("http://localhost:8080/allExpense.html");
+				window.location.redirect("http://localhost:8080/allExpense.html");
 			}
 			
 		},

@@ -17,7 +17,7 @@ public interface ExpenseRepository extends JpaRepository<AddExpenseEntity, Integ
 	List<AmountByMonth> getAmount(Integer id);
 	
 	@Query(value = "SELECT sum(amount) FROM expense where user_id=?",  nativeQuery = true)
-	int getExpenditure(Integer id);
+	Integer getExpenditure(Integer id);
 	
 	@Query(value = "SELECT * FROM expense u WHERE u.user_id = ?",  nativeQuery = true)
 	List<AddExpenseEntity> getAllExpense(Integer id);
