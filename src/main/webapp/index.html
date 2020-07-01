@@ -1,13 +1,24 @@
-<!DOCTYPE unspecified PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
-		<title>start</title>
+		<title>login</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/index.js"></script>
+		<link rel="stylesheet" type="text/css" href="index.css" />
 	</head>
 	<body>
+		<div class="box"></div>
+		<div id="title"><h1>Expense Manager System</h1></div>
+		<form id="loginform">
+			<input type="email" id="email" placeholder="Email" required><br><br>
+		    <input type="password" id="password" placeholder="Password" required><br><br>
+			<input type="submit" value="Login" class="submit">
+			<div class="container signin">
+   			  <p>Not a Member? <a href="register.html">Become One</a></p>
+ 			</div>
+		</form>
 		
-		<input type="button" onClick="location.href='login.html'" value="Login"><br><br>
-		<input type="button" onClick="location.href='register.html'" value="Register">
-		
+		<div id="emailError"></div>
+		<div id="passwordError"></div>
 	</body>
 </html>

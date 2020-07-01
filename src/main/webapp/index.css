@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+input[type=email],input[type=password] {
+ 
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+
+input[type=submit] {
+  background-color: #3f7687;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align: center
+  
+}
+
+input[type=submit]:hover {
+ 
+    color: white;
+  border-color: currentColor;
+  background-color: #09323f;
+}
+
+input[type=submit]:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+
+/*   */
+#loginform {
+	position: fixed;
+	margin-left: -150px;
+	margin-top: 0px;
+	top: 50%;
+	left: 50%;
+}
+
+#emailError {
+	position: fixed;
+	margin-left: 50px;
+	margin-top: -5px;
+	top: 50%;
+	left: 50%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+  font-weight: 600;
+	color:#ff0000;
+	
+}
+
+#passwordError {
+	position: fixed;
+	margin-left: 50px;
+	margin-top: 55px;
+	top: 50%;
+	left: 50%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+  font-weight: 600;
+	color:#ff0000;
+}
+
+body {
+  background-color: #105469;
+}
+
+.box {
+	width:1520px;
+	height:100px;
+	margin:0px;
+	background: #09323f;
+}
+
+#title {
+	text-align: center;
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 1.5em;
+	font-weight: 300;
+	margin-top: -125px;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}

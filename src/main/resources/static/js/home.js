@@ -35,7 +35,7 @@ $(function() {
 						
 						tbody.append(' \
 								<tr align="center">\
-									<td>Total Expenditure	</td>\
+									<td><h4>Total Expenditure</h4>	</td>\
 									<td>' + data.expenditure
 								+ '</td>\
 								</tr>');	

@@ -40,7 +40,7 @@ tbody tr:hover {
 table.center {
 	position: fixed;
 	margin-left: -300px;
-	margin-top: -200px;
+	margin-top: -170px;
 	top: 50%;
 	left: 50%;
 }
@@ -100,7 +100,7 @@ table.center {
 	left: 50%;
 }
 
-input[type=text],input[type=date] {
+input[type=text],input[type=date],input[type=number] {
   padding:10px;
   border:0;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
@@ -160,7 +160,8 @@ input[type=submit]:active {
   font-family: 'Open Sans', sans-serif;
 
   /* create a small space when buttons wrap on 2 lines */
-  margin: 2px 0;
+  margin-left: 1350px ;
+  margin-top: -25px;
 
   /* invisible border (will be colored on hover/focus) */
   border: solid 1px transparent;
@@ -181,4 +182,20 @@ input[type=submit]:active {
 .home:active {
   transform: translateY(1px);
   filter: saturate(150%);
+}
+
+.box {
+	width:1520px;
+	height:100px;
+	margin-left:8px;
+	margin-top:8px;
+	background: #09323f;
+}
+#title {
+	margin-top:150px;
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 1.1em;
+	font-weight: 200;
+	margin-top: 0px;
+	margin-left: 10px;
 }

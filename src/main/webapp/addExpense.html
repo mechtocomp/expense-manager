@@ -7,15 +7,16 @@
 		<link rel="stylesheet" type="text/css" href="addExpense.css" />
 	</head>
 	<body>
+		<div class="box"></div>
+		<div id="heading"><h1>Add Expense</h1></div>
 		<form id="expenseform">
 			 <input type="text" id="title" placeholder="Expense Title" required><br><br>
 			 <input type="text" id="category" placeholder="Category" required><br><br>
-			 <input type="text" id="amount" placeholder="Amount" required pattern="[0-9]{1,}" title="Enter a valid number"><br><br>
+			 <input type="number" id="amount" placeholder="Amount" required><br><br>
 			 <input type="date" id="date" placeholder="Date" required><br><br>
 			<input type="submit" value="Add Expense"><br><br>
 		</form>
-		
-		<div id="postresult"></div><br><br>
-		<input type="button" class="home" onClick="location.href='home.html'" value="Home"><br><br>
+		<input type="button" class="home" onClick="location.href='home.html'" value="Dashboard"><br>
+		<div id="postresult"></div>
 	</body>
 </html>

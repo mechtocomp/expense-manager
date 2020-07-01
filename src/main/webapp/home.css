@@ -5,7 +5,7 @@ table, th, td {
 table.center {
 	position: fixed;
 	margin-left: -150px;
-	margin-top: -200px;
+	margin-top: -100px;
 	top: 50%;
 	left: 50%;
 }
@@ -58,22 +58,22 @@ tbody tr:hover {
 /* LOGOUT BUTTON*/
 #logout {
 	
-	margin-left: 1300px;
-	margin-top: 50px;
+	margin-left: 1420px;
+	margin-top: -20px;
 	top: 50%;
 	left: 50%;
 }
 #allExpense {
 	
-	margin-left: 615px;
-	margin-top: -10px;
+	margin-left: 1135px;
+	margin-top: -33px;
 	top: 50%;
 	left: 50%;
 }
 #add {
 	
-	margin-left: 615px;
-	margin-top: 250px;
+	margin-left: 1290px;
+	margin-top: -33px;
 	top: 50%;
 	left: 50%;
 }
@@ -126,4 +126,20 @@ tbody tr:hover {
   color: white;
   border-color: currentColor;
   background-color: transparent;
+}
+
+.box {
+	width:1520px;
+	height:100px;
+	margin-left:8px;
+	margin-top:8px;
+	background: #09323f;
+}
+#title {
+	margin-top:150px;
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 1.1em;
+	font-weight: 200;
+	margin-top: 0px;
+	margin-left: 10px;
 }

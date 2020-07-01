@@ -39,7 +39,7 @@ function ajaxUpdateExpense(expenseTitle,category,amount,date,uid){
 			<form id="updateForm">\
 				Expense Title: <input type="text" id="title" name="title" value='+expenseTitle+' required>&nbsp\
 				Category: <input type="text" id="category" name="category" value='+category+' required>&nbsp\
-				Amount: <input type="text" id="amount" name="amount" value='+amount+' required pattern="[0-9]{1,}" title="Enter a valid number">&nbsp\
+				Amount: <input type="number" id="amount" name="amount" value='+amount+' required  >&nbsp\
 				Date: <input type="date" id="date" name="date" value='+date+' required>&nbsp &nbsp\
 				<input type="submit" id="submitUpdate">\
 			</form>\
